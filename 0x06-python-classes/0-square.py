@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module defines an empty Square class
+Module for defining an empty Square class
 """
 
 class Square:
