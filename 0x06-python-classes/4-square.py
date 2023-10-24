@@ -17,6 +17,12 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+  
+    def area(self):
+        """" 
+	Initializes a Square object with given size
+        """
+    @property
 
      def size(self):
         """" 
@@ -24,13 +30,8 @@ class Square:
         """
         return self.__size
     @size.setter
-    
-    def area(self):
-        """" 
-	Initializes a Square object with given size
-        """
-    @property
-   def size(self, value):
+ 
+    def size(self, value):
         """" 
 	Initializes a Square object with given size
         """
