@@ -1,22 +1,29 @@
 #!/usr/bin/python3
+"""
+Module for defining a Square
+"""
 class Square:
-    """ A class that defines a square by its size
+    """"
+    Class representing a square
     """
     def __init__(self, size=0, position=(0, 0)):
-        """ Method to initialize the square object
+        """" 
+	Initializes a Square object with given size
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """ Method to returns the size value
+        """" 
+	Initializes a Square object with given size
         """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """ Method to set the size value of the square object
+        """" 
+	Initializes a Square object with given size
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -26,13 +33,15 @@ class Square:
 
     @property
     def position(self):
-        """ Method that returns the position value
+        """" 
+	Initializes a Square object with given size
         """
         return self.__position
 
     @position.setter
     def position(self, value):
-        """ Method that sets the position value of a square object
+        """" 
+	Initializes a Square object with given size
         """
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -47,13 +56,14 @@ class Square:
         self.__position = value
 
     def area(self):
-        """ Method that returns the square are of the object
+        """" 
+	Initializes a Square object with given size
         """
         return (self.__size ** 2)
 
     def my_print(self):
-        """ Method that prints a # square according
-        to the size value
+        """" 
+	Initializes a Square object with given size
         """
         if self.size == 0:
             print()
