@@ -22,15 +22,15 @@ class Square:
         """" 
 	Initializes a Square object with given size
         """
+    
     @property
-
-     def size(self):
+    def size(self):
         """" 
 	Initializes a Square object with given size
         """
         return self.__size
+    
     @size.setter
- 
     def size(self, value):
         """" 
 	Initializes a Square object with given size
