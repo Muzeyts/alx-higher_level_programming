@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-'''Python Function tle and i ola
-'''
+"""5. To JSON string"""
 
 
-def write_file(filename="", text=""):
-    with open(filename, 'w', encoding='utf-8') as f:
-        return f.write(text)
+def to_json_string(my_obj):
+    """returns the JSON representation of an object (string)
+    Args:
+        my_obj: python object
+    Returns:
+        [str]: JSON representation
+    """
+    import json
+    return json.dumps(my_obj)
