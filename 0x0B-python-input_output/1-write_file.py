@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-""" Module that contains a function that writes to a text file
+""" contains a function which wites to a text file
 """
 
 
 def write_file(filename="", text=""):
-    """ Function that writes to a text file
+    """ this writes to a text file
 
     Args:
-        filename: filename
-        text: text to write
+        filename: the file name 
+        text: text to write here
 
     Raises
-        Exception: when the file can be opened
+        Exception: exeption for  file can be opened
 
     """
 
