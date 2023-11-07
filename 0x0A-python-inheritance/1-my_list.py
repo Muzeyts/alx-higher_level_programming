@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+'''
+Python class to inherit from list class
+'''
+
+
 class MyList(list):
-    """ Class that inhreferences  trueof class list
-    Args:
-        list: class of list
-    """
+    '''
+    Class inheritance
+    '''
+
     def print_sorted(self):
-        """ prints sorted list """
-        sortd = self.copy()
-        sortd.sort()
-        print(sortd)
+        print(sorted(self))
