@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""7. Save Object to a file"""
+""" Module that returns the dictionary description with a simple
+data structure for a JSON serialization of an object
+"""
 
 
-def save_to_json_file(my_obj, filename):
-    """writes an Object to a text file, using a JSON representation
-    Args:
-        my_obj (object): a python object
-        filename (str): name of the json file
-    """
-    import json
+def class_to_json(obj):
+    """ Function that retuns the dictionary description of an obj """
 
-    with open(filename, mode='w', encoding='utf-8') as file:
-        json.dump(my_obj, file)
+    res = {}
+    if hasattr(obj, "__dict__"):
+        res = obj.__dict__.copy()
+    return res
