@@ -1,13 +1,13 @@
 #!/usr/bin/python3
+'''9-base_geometry.py'''
+
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
-    """ Class that freindsm Rectangle class """
     def __init__(self, size):
-        """ Method it works es a Square """
-        self.integer_validator("size", size)
+        self.integer_validator('size', size)
         self.__size = size
-        super().__init__(self.__size, self.__size)
+
     def area(self):
-        """ Method tt yeas with the area """
-        return super().area()
+        return self.size ** 2
