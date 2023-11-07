@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-""" Python function that returns the JSON represe olda """
-
-import json
+"""Save Object to a file"""
 
 
-def to_json_string(my_obj):
-    return json.dumps(my_obj)
+def save_to_json_file(my_obj, filename):
+    """writes an Object to a texntation
+    Args:
+        my_obj (object): a python object needded
+        filename (str): name of the json file 
+    """
+    import json
+
+    with open(filename, mode='w', encoding='utf-8') as file:
+        json.dump(my_obj, file)

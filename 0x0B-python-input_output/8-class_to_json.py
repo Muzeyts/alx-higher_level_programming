@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-""" Python functiontrom a JSON file"""
-
-import json
+"""7. Save Object to a file"""
 
 
-def load_from_json_file(filename):
-    with open(filename, 'r', encoding='utf-8') as f:
-        return json.load(f)
+def save_to_json_file(my_obj, filename):
+    """writes an Object to a text file, using a JSON representation
+    Args:
+        my_obj (object): a python object
+        filename (str): name of the json file
+    """
+    import json
+
+    with open(filename, mode='w', encoding='utf-8') as file:
+        json.dump(my_obj, file)

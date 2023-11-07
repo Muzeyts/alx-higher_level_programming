@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 """
-Python Function that writs an object to a file
-Using JSON representation
+adds all arguments to a Python list
 """
+import sys
 
-import json
 
+save = __import__('5-save_to_json_file').save_to_json_file
+load = __import__('6-load_from_json_file').load_from_json_file
 
-def save_to_json_file(my_obj, filename):
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write(json.dumps(my_obj))
+open("add_item.json", "a")
+try:
+    i = load("add_item.json")
+except ValueError:
+    i = []
+save(i + sys.argv[1:], "add_item.json")

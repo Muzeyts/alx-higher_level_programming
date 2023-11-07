@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-'''Python Function that reads a file and prints to stdout'''
+"""Reading and writing"""
 
 
 def read_file(filename=""):
-    with open(filename, encoding='utf-8') as f:
-        for line in f:
-            print(line, end="")
+    """reading operation
+        Args:
+            filename (str, optional): name of the text file. Defaults to "".
+    """
+    with open(filename, "r", encoding="utf-8") as file:
+        print(file.read(), end="")

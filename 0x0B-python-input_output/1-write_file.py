@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-'''Python Function to count number amaizing of lines in a file'''
+"""Defines a file-writing function."""
 
 
-def number_of_lines(filename=""):
-    counter = 0
-    with open(filename, encoding='utf-8') as f:
-        for line in f:
-            counter += 1
-    return counter
+def write_file(filename="", text=""):
+    """Write a string to a UTF8 text file.
+    Args:
+        filename (str, optional): name of the file to write. Defaults to "".
+        text (str): The text to write to the file.
+    Returns:
+        [int]: The number of characters written.
+    """
+    with open(filename, "w", encoding="utf-8") as file:
+        return file.write(text)

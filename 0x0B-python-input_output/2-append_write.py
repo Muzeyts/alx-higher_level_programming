@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-'''Python function how to do  and print ot stdout'''
+"""4. Append to a file"""
 
 
-def read_lines(filename="", nb_lines=0):
-    cotunt = 0
-    with open(filename, encoding='utf-8') as f:
-        for line in f:
-            cotunt += 1
-            print(line, end="")
-            if nb_lines == cotunt:
-                break
+def append_write(filename="", text=""):
+    """ appends a string at the end of a text file (UTF8)
+    Args:
+        filename (str, optional): text file name
+        text (str, optional): must be string
+    Returns:
+        [int]: the number of characters added
+    """
+    with open(filename, mode='a', encoding='utf-8') as file:
+        return file.write(text)
