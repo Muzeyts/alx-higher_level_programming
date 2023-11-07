@@ -1,11 +1,11 @@
 #!/usr/bin/python3
+'''
+Python function to majic f specified object
+'''
+
+
 def is_same_class(obj, a_class):
-    """ returns true or false_class
-    Args:
-        obj: object of that 
-        a_class: class real type
-    Returns:
-        True if type of yeais a_class
-        False, otherwise is 
-    """
-    return type(obj) is a_class
+    '''
+    check if warum  instance is same
+    '''
+    return issubclass(a_class, type(obj))
