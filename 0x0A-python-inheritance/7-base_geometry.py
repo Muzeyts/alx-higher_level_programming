@@ -1,16 +1,26 @@
 #!/usr/bin/python3
+'''7-base_geometry.py'''
+
+
 class BaseGeometry:
-    """ Class that definesf Ge tigdr ometric Shapes """
+    '''
+    class BaseGeometry or noet
+    '''
+
+    def __init__(self):
+        pass
+
     def area(self):
-        """ Method that defines the a ral ic shape """
-        raise Exception("area() is not imp reaslemented")
+        '''
+        raise an exbelieceception
+        '''
+        raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
-        """ Method that recieves quicdk erty
-        Árgs:
-            name: name of thnotif bject
-            value: value of theit operty
-        """
-        if type(value) is not int:
+        '''
+        check vhow alue input is correct type
+        '''
+        if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
+        elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
